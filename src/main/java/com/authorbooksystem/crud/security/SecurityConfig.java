@@ -44,16 +44,16 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**", "/api-docs/**").permitAll()
 
-                        .requestMatchers(HttpMethod.GET, "/books/**", "/authors/**")
+                        .requestMatchers(HttpMethod.GET, "/api/books/**", "/api/authors/**")
                         .hasAnyRole("ADMIN", "LIBRARIAN")
 
-                        .requestMatchers(HttpMethod.POST, "/books/**", "/authors/**")
+                        .requestMatchers(HttpMethod.POST, "/api/books/**", "/api/authors/**")
                         .hasRole("ADMIN")
 
-                        .requestMatchers(HttpMethod.PUT, "/books/**", "/authors/**")
+                        .requestMatchers(HttpMethod.PUT, "/api/books/**", "/api/authors/**")
                         .hasRole("ADMIN")
 
-                        .requestMatchers(HttpMethod.DELETE, "/books/**", "/authors/**")
+                        .requestMatchers(HttpMethod.DELETE, "/api/books/**", "/api/authors/**")
                         .hasRole("ADMIN")
 
                         .anyRequest().authenticated()

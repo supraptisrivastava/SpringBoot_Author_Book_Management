@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/api/books")
 @Tag(name = "Book Management", description = "APIs for managing books in the system")
 public class BookController {
     

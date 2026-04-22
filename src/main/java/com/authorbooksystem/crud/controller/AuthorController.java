@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
-@RequestMapping("/authors")
+@RequestMapping("/api/authors")
 @Tag(name = "Author Management", description = "APIs for managing authors in the system")
 public class AuthorController {
     
