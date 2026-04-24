@@ -23,14 +23,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
 
-    volumes:
-      - library-network:/var/lib/postgresql/data
-
     networks:
       - library-network
 
 networks:
   library-network:
-
-volumes:
-  library-network:
+    driver: bridge
